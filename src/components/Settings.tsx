@@ -5,7 +5,7 @@ type SettingsProps = {
 const Settings: FC<SettingsProps> = ({ className }) => {
   return (
     <div
-      className={`bg-black text-2xl text-gray-200 w-[30%] h-screen border-r-[1px]  border-gray-700 ${className}`}
+      className={`text-2xl text-gray-800 dark:text-gray-200 w-[30%] h-screen border-r-[1px]  border-gray-700 ${className}`}
     >
       Settings
     </div>

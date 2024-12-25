@@ -10,7 +10,7 @@ type ChatBoxProps = {
 
 const ChatBox: FC<ChatBoxProps> = ({ className }) => {
   return (
-    <div className={`text-white w-[70%]  ${className} bg-black`}>
+    <div className={`text-white w-[70%]  ${className} `}>
       <ChatBar />
       <ChatArea messages={messages} />
       <MessageBox />

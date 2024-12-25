@@ -1,20 +1,23 @@
 import ChatRow from "./ChatRow";
-
-const ChatSection = ({
-  title,
-  chats,
-  isGroup = false,
-}: {
+import { FC } from "react";
+type ChatSectionProps = {
   title: string;
-  chats: { name: string; message: string; time: string; avatarSrc: string }[];
+  chats: Array<{
+    name: string;
+    message: string;
+    time: string;
+    avatarSrc: string;
+    seen: boolean;
+  }>;
   isGroup: boolean;
-}) => (
+};
+const ChatSection: FC<ChatSectionProps> = ({ title, chats, isGroup }) => (
   <div
-    className={`mt-2 bg-black overflow-y-scroll no-scrollbar ${
+    className={`mt-2  overflow-y-scroll no-scrollbar ${
       isGroup ? "h-[300px]" : "h-48"
     }`}
   >
-    <div className="text-gray-100 text-xs font-semibold mx-2 sticky top-0 z-10 py-2 bg-black w-full">
+    <div className="text-gray-800 dark:text-gray-100 bg-white dark:bg-black text-xs font-semibold  sticky top-0 left-0 z-10 py-2   w-full">
       {title}
     </div>
     {chats.map((chat, index) => (

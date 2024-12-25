@@ -6,39 +6,34 @@ import ChatBox from "./ChatBox";
 import Notifications from "./Notifications";
 import Settings from "./Settings";
 
-const Chat1 = () => {
+const Chat = () => {
   const [active, setActive] = useState("home");
   const [isOpen, setIsOpen] = useState(false);
   const handleResize = () => {
     if (window.innerWidth < 768) {
-      setActive("messages"); // Default to 'messages' in mobile view
+      setActive("messages");
     } else {
-      setActive("home"); // Default to 'home' in fullscreen view
+      setActive("home");
     }
   };
 
-  // Set default view based on initial screen size
   useEffect(() => {
-    handleResize(); // Set initial active view based on screen size
-    window.addEventListener("resize", handleResize); // Add resize event listener
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize); // Clean up event listener on unmount
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
   return (
-    <div className="flex bg-black">
+    <div className="flex dark:bg-black">
       <SideBar
         active={active}
         setActive={setActive}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
       />
-      <div
-        className={`flex w-full bg-black ${
-          isOpen ? "pl-12" : "" // Apply padding when the sidebar is open
-        } sm:pl-36`} // Apply padding on sm (desktop) breakpoint
-      >
+      <div className={`flex w-full  ${isOpen ? "pl-12" : ""} sm:pl-36`}>
         {active === "home" && (
           <>
             <AllChats />
@@ -54,4 +49,4 @@ const Chat1 = () => {
   );
 };
 
-export default Chat1;
+export default Chat;

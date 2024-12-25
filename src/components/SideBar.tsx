@@ -1,4 +1,4 @@
-import { useState, FC } from "react";
+import { FC } from "react";
 import {
   IoHomeOutline,
   IoHome,
@@ -11,14 +11,10 @@ import {
 } from "react-icons/io5";
 
 import { AiOutlineMessage, AiFillMessage } from "react-icons/ai";
-import {
-  BsBell,
-  BsBellFill,
-  BsChatLeftDots,
-  BsChatLeftDotsFill,
-} from "react-icons/bs";
+import { BsBell, BsBellFill } from "react-icons/bs";
 import { HiMenuAlt3 } from "react-icons/hi";
-import avatar from "../assets/avatar.jpg";
+
+import ThemeToggleButton from "./ThemeToggleButton";
 
 type MenuItem = {
   id: string;
@@ -115,7 +111,6 @@ const SideBar: FC<SideBarProps> = ({
 
   return (
     <div>
-      {/* Mobile Menu Button */}
       <button
         className="absolute top-4 left-4 z-50 sm:hidden text-white text-2xl"
         onClick={() => setIsOpen(!isOpen)}
@@ -123,13 +118,11 @@ const SideBar: FC<SideBarProps> = ({
         {isOpen ? <IoClose /> : <HiMenuAlt3 />}
       </button>
 
-      {/* Sidebar */}
       <div
         className={`flex flex-col fixed z-50 w-14 h-[95%] items-end bg-[#1A66FF] transition-transform transform 
           ${isOpen ? "translate-x-0" : "-translate-x-full"} 
           sm:flex flex-col sm:fixed sm:m-4 sm:w-24 sm:h-[95%] sm:rounded-lg sm:items-end sm:translate-x-0`}
       >
-        {/* Close Button for Sidebar (Mobile) */}
         {isOpen && (
           <button
             className="absolute top-4 right-3 text-white text-2xl sm:hidden"
@@ -139,19 +132,16 @@ const SideBar: FC<SideBarProps> = ({
           </button>
         )}
 
-        {/* Avatar */}
         <div className="mx-2 my-14 sm:mx-6 sm:my-10">
           <img
-            src={avatar}
+            src="https://i.pravatar.cc/150?img=58"
             className="w-8 h-8 sm:w-12 sm:h-12 rounded-full"
             alt="Avatar"
           />
         </div>
 
-        {/* Menu Items */}
         <div className="space-y-4 pt-6">{menuItems.map(renderMenuItem)}</div>
 
-        {/* Logout */}
         <div className="pt-20">
           <div
             className={
@@ -160,6 +150,12 @@ const SideBar: FC<SideBarProps> = ({
             onClick={() => alert("Logging out...")}
           >
             <IoLogOutOutline className="text-lg sm:text-3xl text-white" />
+          </div>
+        </div>
+
+        <div className="pt-10 ">
+          <div className={"pr-2 py-2 pl-1   sm:pl-3 sm:pr-6 sm:py-3 "}>
+            <ThemeToggleButton />
           </div>
         </div>
       </div>

@@ -1,9 +1,9 @@
-import Chat1 from "./components/Chat1";
+import Chat from "./components/Chat";
 
 const App = () => {
   return (
     <div>
-      <Chat1 />
+      <Chat />
     </div>
   );
 };
