@@ -119,7 +119,7 @@ const SideBar: FC<SideBarProps> = ({
       </button>
 
       <div
-        className={`flex flex-col fixed z-50 w-14 h-[95%] items-end bg-[#1A66FF] transition-transform transform 
+        className={`flex flex-col fixed z-50 w-14 h-[100%] items-end bg-[#1A66FF] transition-transform transform 
           ${isOpen ? "translate-x-0" : "-translate-x-full"} 
           sm:flex flex-col sm:fixed sm:m-4 sm:w-24 sm:h-[95%] sm:rounded-lg sm:items-end sm:translate-x-0`}
       >

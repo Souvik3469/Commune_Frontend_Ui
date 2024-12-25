@@ -43,8 +43,8 @@ const AllChats: FC<AllChatsProps> = ({ className }) => {
         </div>
       </div>
 
-      <ChatSection title="GROUP CHATS" chats={groupChats} isGroup={false} />
-      <ChatSection title="ALL CHATS" chats={allChats} isGroup={true} />
+      <ChatSection title="GROUP CHATS" chats={groupChats} isGroup={true} />
+      <ChatSection title="ALL CHATS" chats={allChats} isGroup={false} />
     </div>
   );
 };
