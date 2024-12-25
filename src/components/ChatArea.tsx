@@ -8,7 +8,7 @@ interface Message {
 
 const ChatArea = ({ messages }: { messages: Message[] }) => {
   return (
-    <div className="text-white bg-gray-100 dark:bg-black h-[550px] sm:h-[520px] flex flex-col px-2 overflow-y-scroll no-scrollbar">
+    <div className="text-white bg-gray-100 dark:bg-black h-[82%] flex flex-col px-2 overflow-y-scroll no-scrollbar">
       {messages.map((msg, index) => {
         const isUser1 = msg.sender === "User1";
         return (

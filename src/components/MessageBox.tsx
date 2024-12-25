@@ -4,7 +4,7 @@ import { RiSendPlaneFill } from "react-icons/ri";
 import { CgAttachment } from "react-icons/cg";
 const MessageBox = () => {
   return (
-    <div className=" sticky bottom-0 z-10 border-t-[1px] border-gray-300 dark:border-gray-600 grid grid-cols-12 px-4 sm:px-8 py-2">
+    <div className="bg-white dark:bg-black sticky bottom-0 z-10 border-t-[1px] border-gray-300 dark:border-gray-600 grid grid-cols-12 px-4 sm:px-8 py-2">
       <div className="col-span-9 flex items-center text-white">
         <div>
           <FaRegFaceSmile className="text-gray-500 text-xl" />
