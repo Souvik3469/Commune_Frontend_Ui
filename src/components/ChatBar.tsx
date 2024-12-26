@@ -3,7 +3,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 
 const ChatBar = () => {
   return (
-    <div className="grid grid-cols-12 p-2 border-b-[1px] border-gray-300 dark:border-gray-700 sticky top-0 z-10">
+    <div className="grid grid-cols-12 p-2 bg-white dark:bg-black border-b-[1px]  border-gray-300 dark:border-gray-700 sticky top-0 z-10">
       <div className="col-span-9 flex items-center mx-2">
         <div className="relative">
           <img
